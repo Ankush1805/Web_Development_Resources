@@ -1,0 +1,105 @@
+/* 
+1.Animation in CSS
+2. % in Animation
+
+*/
+
+.box {
+    height: 100px;
+    width: 300px;
+    background-color: pink;
+
+    /* Step-2 */
+    /* Using animatiom properties to apply animation */
+
+    animation-name: fontAnimation;
+    animation-name: colorAnimation;
+    animation-name: widthAnimation;
+
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+    animation-delay: 0s;
+
+    animation-iteration-count: 3;
+    /* animation-iteration-count: infinite; */
+
+    animation-direction: normal;
+    animation-direction: reverse;
+    animation-direction: alternate;
+    animation-direction: alternate-reverse;
+
+    /* Animation Shorthand */
+    animation: widthAnimation 2s ease-in 0s infinite normal;
+
+}
+
+/* Step-1 */
+/* Animation Blueprint */
+@keyframes fontAnimation {
+    from {
+        font-size: 20px;
+    }
+    to {
+        font-size: 40px;
+    }
+}
+
+@keyframes colorAnimation {
+    from {
+        background-color: green;
+    }
+    to {
+        background-color: blue;
+    }
+}
+
+@keyframes widthAnimation {
+    from {
+        width: 10px;
+    }
+    to {
+        width: 400px;
+    }
+}
+
+/* How to change multiple properties in an animation */
+@keyframes widthAnimation {
+    from {
+        width: 10px;
+        font-size: 20px;
+        background-color: green;
+    }
+    to {
+        width: 400px;
+        font-size: 40px;
+        background-color: blue;
+        border-radius: 50px;
+    }
+}
+
+/* % in Animation */
+@keyframes widthAnimation {
+    0% {
+        width: 10px;
+        font-size: 20px;
+        background-color: green;
+    }
+    50% {
+        width: 400px;
+        font-size: 40px;
+        background-color: blue;
+        border-radius: 50px;
+    }
+    80% {
+        width: 600px;
+        font-size: 60px;
+        background-color: yellow;
+        border-radius: 80px;
+    }
+    100% {
+        width: 800px;
+        font-size: 80px;
+        background-color: red;
+        border-radius: 100px;
+    }
+}

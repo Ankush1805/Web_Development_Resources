@@ -1,0 +1,108 @@
+/* 
+1. Flexbox- Its is one-deimensional layout method for arranging items in rows or columns
+2. Flexbox direction- It sets how flex items are placed in flex container, along with axis & diection
+3. Justify Content- Tells how the browser distributes space between & around content items along the main axis
+4. Flex Wrap- Sets whether flex items are forced onto one line or can wrap onto multiple lines
+5. Align Items- Distributes items along the cross axis
+6. Align Content- It sets  distribution of space  between & around  content items along  a flexbox's cross axis
+7. Align Self- Aligns an item along the  cross axis
+NOTE- Align Items-> Group, Align Self-> Individual
+    - Align Self has high priority than Align Items
+8. Flex Sizing- It sets the initial main size of a flex item
+9. Flex Shorthand
+
+    flex: 2 2 100px; (flex-grow, flex-shrink, flex-basis) // flex-basis->initial size
+
+ */
+
+#container {
+    height: 500px;
+    width: 80%;
+    border: 2px solid black;
+    margin: 10px auto;
+    background-color: azure;
+    display: flex; /* this will arrange all element in row by default */
+
+
+    flex-direction: row; /* main axis, left to right*/
+    /* reduce width of div to 100px to see the axis & direction*/
+    flex-direction: row-reverse; /* main axis, right to left  */
+    flex-direction: column; /* main axis, top to bottom  */
+    /* reduce height of div to 100px to see the axis & direction*/
+    flex-direction: column-reverse; /* main axis, bottom to top */
+
+    justify-content: flex-start; /* by default */
+    justify-content: flex-end;
+    justify-content: center;
+    justify-content: space-between;
+    justify-content: space-around;
+    justify-content: space-evenly;
+
+    flex-direction: row;
+    /* set width=100px */
+    flex-wrap: nowrap; /* by default */
+    flex-wrap: wrap;
+    justify-content: flex-start; /* by default */
+    flex-wrap: wrap-reverse;
+
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: flex-start; /* by default */
+    align-items: flex-end;
+
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    align-content: flex-end;
+    align-content: center;
+    align-content: space-between;
+    align-content: space-around;
+    align-content: space-evenly;
+    align-content: baseline;
+    
+    /* Align Self */
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    /* Flex grow */
+    flex-wrap: wrap;
+
+    /* Flex shrink */
+    flex-wrap: nowrap;
+
+}
+
+#black {
+    color: white;
+    align-self: flex-end;
+    align-self: center;
+    align-self: baseline;
+    flex-basis: 50px;
+}
+
+#blue {
+    /* reduce widht=50px */
+    flex-grow: 1;
+    min-width: 400px;
+    flex: 2 2 100px;
+}
+
+#orange {
+    /* increase width=300px */
+    flex-shrink: 3;
+}
+
+h1 {
+    text-align: center;
+}
+
+/* selecting all div's inside container (Descendant Selector) */
+#container div {
+    height: 100px;
+    width: 300px;
+    text-align: center;
+    font-size: 1.5em; /* 1.5 times of parent element */
+}

@@ -1,0 +1,20 @@
+/* 
+1.Alpha- Sets opacity of color (color kitna dikahyi dega)
+2.Opacity- Sets opacity of element (element kitna dikahyi dega)  
+(Ranges from 0-1, where 0=hidden, 1=completely visible)
+*/
+
+div {
+    height: 200px;
+    width: 200px;
+    background-color: rgba(102, 255, 0, 0.5); /* when alpha=0, only color gets disappear*/
+    
+}
+
+#opacity {
+    height: 200px;
+    width: 200px;
+    background-color: rgba(255, 72, 0, 0.979);
+    opacity: 0.1; /* when opacity=0, all elements gets disappear*/
+    
+}

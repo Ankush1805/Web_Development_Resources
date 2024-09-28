@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables in HTML</title>
+</head>
+<body>
+    <h2><u>Tables in HTML</u></h2>
+    <table border="black">
+        <caption>Food Menu</caption>
+        <tr>
+            <th>Item</th>
+            <th>Price(in Rs)</th>
+        </tr>
+
+        <tr>
+            <td>Fruti</td>
+            <td>10</td>
+        </tr>
+
+        <tr>
+            <td>Samosa</td>
+            <td>30</td>
+        </tr>
+    </table>
+
+    <h2><u>Semantics in Tables</u></h2>
+    <p>&lt;thead&gt;, &lt;tbody&gt;, &lt;tfooter&gt;</p>
+    <table border="black">
+        <caption>Food Menu</caption>
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Price(in Rs)</th>
+            </tr>
+        </thead>
+       
+        <tbody>
+            <tr>
+                <td>Fruti</td>
+                <td>10</td>
+            </tr>
+    
+            <tr>
+                <td>Samosa</td>
+                <td>30</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <td>Total</td>
+                <td>40</td>
+            </tr>
+        </tfoot>
+       
+    </table>
+
+    <h2><u>Colspan & Rowspan Attributes</u></h2>
+    <p>Used to create cells which spans over multiple rows & column</p>
+    <table border="black">
+        <caption>Food Menu</caption>
+        <thead>
+            <tr>
+                <th rowspan="2">Item</th>
+                <th colspan="2">Price(in Rs)</th>
+            </tr>
+
+            <tr>
+                <th>INR</th>
+                <th>USD</th>
+            </tr>
+        </thead>
+       
+        <tbody>
+            <tr>
+                <td>Fruti</td>
+                <td>10</td>
+                <td>81</td>
+            </tr>
+    
+            <tr>
+                <td>Samosa</td>
+                <td>30</td>
+                <td>240</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <td>Total</td>
+                <td>40</td>
+                <td>320</td>
+            </tr>
+        </tfoot>
+
+
+</body>
+</html>

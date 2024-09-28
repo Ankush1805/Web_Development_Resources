@@ -1,0 +1,333 @@
+* {
+    font-family: "Montserrat", sans-serif;
+    color: #fff;
+}
+
+body {
+    margin: 0; /* removes any default margins (spaces) set by the browser */
+    background-color: #000; /* background-color: black; */
+    overflow: hidden; /* Scrollbars will not appear, regardless of how much content overflows the box */
+}
+
+.main {
+    display: flex; /* create a flex container and enable a flex layout for its direct children */
+    padding: 0.5rem;  /* to provide spacing around 3 sections */
+    height: 100vh; /* sets the height of an element to 100% of the viewport height (entire height of the user's screen) */
+}
+
+.sidebar {
+    background-color: #000;
+    /* height: 100vh; */
+    width: 340px;
+    border-radius: 1rem; /* 1rem=16px, border radius will be 1 times the font size of the root element */
+    margin-right: 0.5rem;
+}
+
+.main-content {
+    background-color: #121212;
+    flex: 1; /* element will grow to fill available space */
+    border-radius: 1rem;
+    overflow: auto; /* if the content of the element exceeds its specified dimensions, scrollbars will appear */
+    padding: 0 1.5rem 0 1.5rem; /* t r b l*/
+}
+
+.music-player {
+    background-color: #000;
+    bottom: 0px;
+    width: 100%;
+    /* height: 72px; */
+    position: fixed;
+}
+
+a {
+    text-decoration: none; /* to remove underline from anchor tags */
+}
+
+.nav {
+    background-color: #121212;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100px;
+    padding: 0.5rem 0.75rem;
+}
+
+.nav-option {
+    line-height: 2.5rem; /* sets the height of each line of text within an element */
+    opacity: 0.7;
+    padding: 0.5rem 0.75rem; /* tb lr */
+}
+
+.nav-option:hover {
+    opacity: 1;
+}
+
+.nav-option i {
+    font-size: 1.25rem;
+}
+
+.nav-option a {
+    font-size: 1rem;
+    margin-left: 1rem;
+}
+
+.library {
+    background-color: #121212;
+    border-radius: 1rem;
+    height: 100%; /* stretch to fill the entire height of the outer <div> */
+    margin-top: 0.5rem;
+    padding: 0.5rem 0.75rem;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lib-option img {
+    /* setting size same as sidebar icons */
+    height: 1.25rem;
+    width: 1.25rem;
+}
+
+.icons {
+    font-size: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.icons i {
+    opacity: 0.7;
+    margin-left: 1rem;
+}
+
+.icons i:hover {
+    opacity: 1;
+}
+
+/* Libraries */
+.box {
+    background-color: #232323;
+    /* height: 8rem; */
+    margin: 0.75rem 0 1.75rem 0;
+    padding: 1rem 1.25rem;
+    border-radius: 0.75rem;
+}
+
+.box-p1 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.box-p2 {
+    font-size: 0.85rem;
+    opacity: 0.9;
+    margin-bottom: 1rem;
+}
+
+.badge {
+    background-color: #fff;
+    color: #000;
+    font-weight: 700;
+    border: none;
+    border-radius: 1rem;
+    padding: 0.25rem 1rem;
+    margin-top: 0.5rem;
+    height: 2rem;
+    width: fit-content; /* wrap its content tightly without taking up more space than necessary */
+}
+
+/* Main-Content */
+.sticky-nav {
+    position: sticky;
+    top: 0;
+    background-color: #121212;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    z-index: 1; /* control which elements appear on top of others (higher z-index is always in front of an element with a lower z-index) */
+    
+}
+
+/* .badge i {
+color: black;
+} */
+
+.sticky-nav-icons img {
+    margin-left: 0.75rem;
+}
+
+.sticky-nav-options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-item {
+    margin-right: 1rem;
+}
+
+.dark-badge {
+    background-color: #000;
+}
+
+@media (max-width: 1000px) {
+    .hide {
+        display: none;
+    }
+}
+
+/* Cards */
+.card {
+    background-color: #232323; /* light-grey */
+    width: 150px;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap; /* allows the items to wrap onto multiple lines, from top to bottom if they overflow the container */
+}
+
+.card-img {
+    width: 100%;
+    border-radius: 0.5rem;
+}
+
+.card-title {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.card-info {
+    font-size: 0.75rem;
+    opacity: 0.7;
+}
+
+.card-info:hover {
+    opacity: 1;
+}
+
+/* Footer */
+.footer {
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.line {
+    width: 90%;
+    height: 50%;
+    border-top: 1px solid white;
+    opacity: 0.4;
+}
+
+/* Music Player */
+.music-player {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.album {
+    width: 25%;
+}
+
+.player {
+    width: 50%;
+}
+
+.controls {
+    width: 25%;
+}
+
+.player-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.player-control-icon {
+    height: 1rem; /* as icons are in img form, need to set the height instead of font-size */
+    margin-right: 1.75rem;
+    opacity: 7;
+}
+
+.player-control-icon:hover {
+    opacity: 1;
+}
+
+.playback-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.progress-bar {
+    width: 70%;
+    appearance: none; /* removes the default styling (browser's built-in stylesheet) of form elements, allowing for custom styling */
+    background-color: transparent;
+    cursor: pointer; /* changes the mouse cursor to a pointing hand when hovered over an element, indicating that the element is clickable */
+}
+
+.progress-bar::-webkit-slider-runnable-track {
+    background-color: #ddd;
+    border-radius: 16px;
+    height: 0.2rem;
+}
+
+.progress-bar::-webkit-slider-thumb {
+    appearance: none;
+    height: 1rem;
+    width: 1rem;
+    background-color: #1bd760;
+    border-radius: 50%;
+    margin-top: -6px;
+}
+
+.album {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.album img {
+    height: 50px;
+    width: 50px;
+    border-radius: 5px;
+    margin-right: 1rem;
+}
+
+.album-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.album-song {
+    font-weight: 600;
+}
+
+.album-singer {
+    font-size: 0.75rem;
+}
+
+.controls-icons{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.controls-icons {
+    margin-right: 0.5rem;
+}
+

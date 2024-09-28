@@ -1,0 +1,87 @@
+/* 
+1. Media Queries- Helps to create a responsive website
+2. media feature->
+- width (of viewport) (don't use practically)
+- min-width or max-width
+3. Orientation (landscape/portrait)
+
+*/
+
+h1 {
+    background-color: yellow;
+    border: 2px solid black;
+}
+
+/* to see the applied changes, set the screen width exactly as given below */
+@media (width: 400px) {
+    h1 {
+        background-color: red;
+        color: white;
+    }
+
+    div {
+        height: 40px;
+        background-color: blue;
+        border: 2px solid black;
+    }
+}
+
+/* min-width */
+/* below changes will be effective when screen width is 800px or more */
+@media (min-width: 600px) {
+    h1 {
+        background-color: greenyellow;
+        color: white;
+    }
+
+    div {
+        height: 40px;
+        background-color: purple;
+        border: 2px solid black;
+    }
+}
+
+/* max-width */
+/* below changes will be effective when screen width is 800px or less */
+@media (max-width: 800px) {
+    h1 {
+        background-color: pink;
+        color: white;
+    }
+
+    div {
+        height: 40px;
+        background-color: brown;
+        border: 2px solid black;
+    }
+}
+
+/* min-width and max-width */
+/* below changes will be effective when screen width is between 600px & 800px */
+@media (min-width: 600px) and (max-width: 800px) {
+    h1 {
+        background-color: black;
+        color: white;
+    }
+
+    div {
+        height: 40px;
+        background-color: black;
+        border: 2px solid black;
+    }
+}
+
+/* Orientation */
+    @media (orientation: landscape) {
+        h1 {
+            background-color: aqua;
+            color:brown;
+        }
+    }
+  /* Ctrl+Shift+M */
+  @media (orientation: portrait) {
+    h1 {
+            background-color: orange;
+            color:black;
+        }
+  }

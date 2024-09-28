@@ -1,0 +1,27 @@
+/* Transitions-enable us to define the transition between two states of an element 
+              like shape/background-color, when hovered/clicked/active (e.g. square to circle) */
+
+div {
+    height: 100px;
+    width: 100px;
+    background-color: rgba(255, 0, 0, 1);
+    margin:0 auto; /* trick to plave element to the center, applies equal margin left/right for element */
+    transition: 2s; /* duration required for transition (one state to other) */
+     /* 
+    transition is shorthand which consists of 4 property- property name|duration|timing-function|delay 
+    */
+    /* Example : try this for 2nd div:hover*/
+    transition: margin-top 2s ease-in-out 0.2s; 
+}
+
+/* Transitions */
+
+/* div:hover {
+    background-color: green;
+    border-radius: 50%;
+} */
+
+div:hover {
+    background-color: green;
+    margin-top: 500px;
+}

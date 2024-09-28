@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+</head>
+<body>
+    <h2>Total no. of users : <%= count %></h2>
+    <br>
+    <form method="get" action="/users">
+        <button>Show User</button>
+    </form>
+    <br>
+    <form method="get" action="/user/add">
+        <button>Create User</button>
+    </form>
+</body>
+</html>

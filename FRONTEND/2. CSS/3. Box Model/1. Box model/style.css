@@ -1,0 +1,110 @@
+/* 
+1.Box model
+2.Height- By default, it sets the content area height of element
+3.Width- By default, it sets the content area width of element
+3.Border- Used to set an elements border
+4.Border radius- Used to round the cornersof an elements outer border edge
+5.Padding property
+6.Margin property- To set spacing on outside of the border
+7.Display property
+8. Unit in CSS
+-Absolute (px)
+-Relative(%,em,rem,vh)
+
+ */
+
+ #block {
+    height: 200px;
+    width: 500px;
+    background-color: pink;
+    border: 5px double red;
+    border-left-color: blue;
+    border-left-style: dashed;
+    border-top: dashed green;
+    border-radius: 15px;
+    padding-top: 20px;
+    margin-bottom: 20px;
+ }
+
+ h1 {
+    /* border-width: 5px;
+    border-style: dotted;
+    border-color: black; */
+    border: 5px double red;  /* Border Shorthand */
+    border-radius: 20%;
+    margin: 10px 20px 30px 40px;
+ }
+
+ button {
+    /* border-top-right-radius: 15px; */
+    padding-left: 25px;     
+    padding-right: 25px;
+    /* Padding shorthand */
+    padding: 50px; /* for all 4 sides*/
+    padding: 1px 2px; /* top&bottom|left&right */
+    padding: 1px 2px 3px; /* top|left&right|bottom */
+    padding: 1px 2px 3px 4px; /* top|right|bottom|left */
+    
+ }
+
+ h2 {
+   /* display: inline; */
+   background-color: green;
+   border: solid black 2px;
+   height: 100px; /* applied*/
+   width: 200px; /* applied*/
+   padding: 50px; 
+   margin: 50px;
+ }
+
+ span {
+   /* display: block; */
+   background-color: green;
+   border: solid black 2px;
+   height: 100px; /* not applied*/
+   width: 200px; /* not applied*/
+   padding: 50px; /* only applied LR*/
+   margin: 50px; /* only applied LR*/
+ }
+
+ h3 {
+   border: 2px solid black;
+   width: 50%; /* 50% of parent element */
+   margin: 100px;
+ }
+
+ #outer{
+   height: 200px;
+   width: 200px;
+   background-color: pink;
+   margin: 50px;
+   font-size: 10px;
+ }
+
+ #inner {
+   height: 50px;
+   width: 50px;
+   background-color: green;
+   margin: 10%; /* 10% of parent element */
+   /* drawback of 'em' >> if font-szie in outer div increases, font-size in inner div increases & so on. 
+   To avoid this we use 'rem*/
+   font-size: 2em; /* 2 times of parent font size*/ 
+   font-size: 2rem;
+ }
+
+ #em {
+   font-size: 20px;
+   border-radius: 10px;
+   border: 2px black solid;
+   /* if the font size increases or decreases, padding space will aslo increase/decrease */
+   /* padding-left: 20px; 
+   padding-right: 20px; */
+
+   /* to avoid this we use 'em' to set padding*/
+   padding-left: 1.5em;
+   padding-right: 1.5em;
+
+   /* drawback of 'em'- snowball effect in nested elements * (refer #outer #inner div ) */
+ }
+
+

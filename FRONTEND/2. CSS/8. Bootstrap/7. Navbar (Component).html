@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar (Component)</title>
+    <!-- Copy-paste the stylesheet <link> into your <head> before all other stylesheets to load our CSS. -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Including style file after css-bootstrap stylesheet will override bootsrap styling -->
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-secondary fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="navbar-nav">
+                    <a class="nav-link" href="#">Home</a>
+                    <a class="nav-link" href="#">Contact</a>
+                    <a class="nav-link" href="#">About Us</a>
+                </div> 
+            </div>
+
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
+        </div>
+    </nav>
+  
+    <nav class="navbar fixed-bottom bg-dark">
+        <a href="#" class="navbar-brand" >Fixed Bottom</a>
+    </nav>
+    
+
+    <p>
+        <ul>
+            <li>navbar: Base class for the navbar.</li>
+            <li>navbar-expand-lg: Expands the navbar on large screens and up.</li>
+            <li>navbar-light bg-light: Applies a light background color and text color to the navbar.</li>
+            <li>navbar-dark bg-dark: Applies a dark background color and light text color to the navbar.</li>
+            <li>navbar-brand: Defines the brand logo or name.</li>
+            <li>navbar-toggler: Defines the toggle button for collapsing the navbar on smaller screens.</li>
+            <li>navbar-toggler-icon: Adds a default icon to the navbar toggler button.</li>
+            <li>collapse navbar-collapse: Defines the collapsible part of the navbar.</li>
+            <li>navbar-nav: Contains the navigation items.</li>
+            <li>nav-item: Defines each item in the navbar.</li>
+            <li>nav-link: Defines the links inside the navbar items.</li>
+            <li>active: Highlights the current page's link.</li>
+            <li>dropdown: Defines a dropdown menu within the navbar.</li>
+            <li>dropdown-menu: Styles the dropdown menu container.</li>
+            <li>dropdown-item: Defines each item in the dropdown menu.</li>
+            <li>dropdown-toggle: Indicates that the dropdown is toggleable.</li>
+            <li>nav-item dropdown: Combines nav item with dropdown for a dropdown link.</li>
+            <li>form-inline: Styles forms within the navbar to be inline.</li>
+            <li>navbar-text: Adds custom text within the navbar.</li>
+            <li>navbar-collapse: Provides responsive collapsing functionality.</li>
+            <li>navbar-fixed-top: Fixes the navbar to the top of the viewport (legacy, use fixed-top instead).</li>
+            <li>navbar-fixed-bottom: Fixes the navbar to the bottom of the viewport (legacy, use fixed-bottom instead).</li>
+            <li>fixed-top: Fixes the navbar to the top of the viewport.</li>
+            <li>fixed-bottom: Fixes the navbar to the bottom of the viewport.</li>
+            <li>sticky-top: Sticks the navbar to the top of the viewport when scrolling.</li>
+          </ul>
+          
+    </p>
+
+
+
+    
+    <hr>
+    <!-- Logo -->
+    <!-- <nav class="navbar bg-dark">
+        <a href="#" class="navbar-brand"><img src="/docs/5.0/assets/brand/bootstrap-logo.svg">Logo</a>
+    </nav> -->
+
+    
+
+
+
+    <div class="container">
+
+
+    </div>
+    
+    <div>
+        <a href="https://getbootstrap.com/docs/5.0/components/navbar/">Refer Docs</a>
+    </div>
+    
+
+    <!-- Place one of the following <script>s near the end of your pages, right before the closing </body> tag, to enable them. -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

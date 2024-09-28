@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms in HTML</title>
+</head>
+<body>
+    <form action="/action">
+        <div>
+            <label for="user">Username :
+            <input type="text" placeholder="Enter Username" id="username" name="user"/>
+            </label>
+           
+        </div>
+
+        <div>
+            <label for="pass">Password :
+            <input type="password" placeholder="Enter Password" id="password" name="pass"/>
+            </label>
+        </div>
+        
+        <div>
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </div>
+    </form>
+
+    <form action="https://www.google.com/search">
+        <h2><u>Google</u></h2>
+        <div>
+            <label>
+                Search :
+                <input type="text" placeholder="search" name="q"/>
+            </label>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+
+    <form action="/action">
+        <h2><u>Checkbox</u></h2>
+        <div></div>
+            <input type="checkbox" name="age" id="age" checked>
+            <label for="age">I am 18+</label>
+            <button>Submit</button>
+        <div>
+            <!--with same name value-->
+            <input type="checkbox" name="subject" id="math">
+            <label for="math">Maths</label>
+            <input type="checkbox" name="subject" id="science">
+            <label for="science">Science</label>
+            <button>Submit</button>
+        </div>
+    </form>
+
+    <form action="/action">
+        <h2><u>Radio</u></h2>
+        <div>
+            <!--name="" should be same for all radio buttons to form a group-->
+            <input type="radio" name="gender" id="male">
+            <label for="male">Male</label>
+            <input type="radio" name="gender" id="female">
+            <label for="female">Female</label>
+            <button>Submit</button>
+        </div>
+        <h4><u>with value attribute</u></h4>
+            <input type="radio" name="gender" id="male" value="male">
+            <label for="male">Male</label>
+            <input type="radio" name="gender" id="female" value="female">
+            <label for="female">Female</label>
+            <button>Submit</button>
+    </form>
+
+    <form action="/action">
+        <h2><u>Dropdown</u></h2>
+        <div>
+            <select name="profession" id="profession">
+                <option selected>Select</option>
+                <option value="qa">Quality Analyst</option>
+                <option value="front">Frontend Developer</option>
+                <option value="back">Backend Developer</option>
+                <option value="fullStack">Full Stack Developer</option>
+            </select>
+        </div>
+        <div>
+            <button>Submit</button>
+        </div>
+    </form>
+
+    <form action="/action">
+        <h2><u>Range</u></h2>
+        <div>
+            <label>Select Volume :</label>
+            <input type="range" min="0" max="100" name="vol">
+        </div>
+
+        <div>
+            <button>Submit</button>
+        </div>
+
+        <!--step attribute allows range to increase in specified steps-->
+        <h4><u>with step attribute</u></h4>
+        <div>
+            <label>Select Volume :</label>
+            <input type="range" min="0" max="100" name="vol" step="10">
+        </div>
+
+        <div>
+            <button>Submit</button>
+        </div>
+
+         <!--values attribute allows to set by default vaule-->
+         <h4><u>with value attribute</u></h4>
+         <div>
+             <label>Select Volume :</label>
+             <input type="range" min="0" max="100" name="vol" step="10" value="10">
+         </div>
+ 
+         <div>
+             <button>Submit</button>
+         </div>
+    </form>
+
+    <form action="/action">
+        <h2><u>Textarea</u></h2>
+        <div>
+            <textarea placeholder="Enter Feedback" id="feedback" name="feedback"></textarea>
+        </div>
+        <div>
+            <button>Submit</button>
+        </div>
+
+        <h2><u>with rows & cols attributes</u></h2>
+        <div>
+            <textarea id="feedback" name="feedback" rows="5" cols="50"></textarea>
+        </div>
+        <div>
+            <button>Submit</button>
+        </div>
+    </form>
+
+</body>
+</html>

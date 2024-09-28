@@ -1,0 +1,71 @@
+/* 
+1. Including CSS-> External Stylesheet (Writing CSS in a seperate document & linking it with HTML file)
+2. Color Property
+3. Background Color Property
+4. Color System (Name & rgb)
+5. Hex Codes
+6. Text Align Property
+7. Font Weight (range=100-900)
+8. Text decoration
+9. Line Height
+10. Letter Spacing
+11. Font size in CSS
+12. Font family
+*/
+
+h1 {
+    /* 
+    h1 = selector,
+    color = property,
+    red = value
+    */
+    color:orange;
+    background-color:maroon;
+    text-align: center;
+    font-weight: lighter; /* bolder */
+    text-decoration: underline;
+    text-decoration-color: white;
+    letter-spacing: 5px;
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+}
+
+h2 {
+    color:rgb(255,0,0);
+    background-color: rgb(255,255,0);
+    text-align: left;
+    font-weight: 400; /* normal=400 */
+    text-decoration: dotted underline;
+    text-decoration: double navy overline;
+    letter-spacing: 10px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
+    
+}
+
+p {
+    color:#0000ff;
+    background-color: #00ff00;
+    text-align: justify;
+    font-weight: 100;
+    text-decoration: wavy red underline;
+    line-height: normal;
+    line-height: 2.5; /* 2.5 times of normal */
+    letter-spacing: normal;
+    letter-spacing: 1px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+a {
+    text-decoration: none; /* specially used for a tag*/
+}
+
+button {
+    color:#000;
+    background-color: #fff;
+    text-align: right;
+    font-weight: 800; /* bold=800 */
+    text-decoration: white line-through;
+}
+   

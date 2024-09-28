@@ -1,0 +1,101 @@
+/* 
+1. Grid- Setting a  container's display to grid will make  all children grid items
+2. Grid Template - How to create 'n' number of grid rows/column
+3. repeat- is used to divide all  available spaces
+4. Grid Gaps- They define the gaps between the lines
+5. Grid columns- Defines an item's starting & ending position inside the column
+6. Grid rows- Defines an item's starting & ending position inside the rows
+7. Grid Properties- 
+    justify-items/self (Horizontal)
+    align-items/self (Vertical)
+    place-items/self
+
+    where items=container & self=item
+
+ */
+
+ .container {
+    width: 600px;
+    height: 300px;
+    background-color: yellow;
+    display: grid; /* by default 5 grid rows will be created (as no of div=5) */
+
+    grid-template-rows: 80px 80px 80px; /* 3 grid rows will be created in the container div & remaining space will be distributed to other div's */
+    grid-template-columns: 100px 100px 100px; /* 3 grid column will be created in the container div*/
+    grid-template-columns: auto auto auto; /* container div will be divided into 3 equal columns*/
+    /* NOTE- we do'nt prefer auto as there are exception where equal spacing is not divided */
+
+    grid-template-rows: repeat(4, 1fr); /* 1fr = 1 fraction of 100% available space*/
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 1fr 1fr 1fr; /* another syntax*/
+
+    /* set width=100px */
+    /* inspect elemenst to see the changes */
+    row-gap: 10px;
+    column-gap: 10px;
+    grid-gap: 10px;
+
+    /* Grid Properties */
+    /* set height=50px to see the changes */
+
+    /* it controls the alignment of items horizontally */
+    justify-items: start;
+    justify-items: end;
+    justify-items: center;
+
+    /* it controls the alignment of items vertically */
+    align-items: start;
+    align-items: end;
+    align-items: center;
+
+    /* it controls the alignment of items horizontally & vertically */
+    place-items: center;
+
+    /*  this allows to display a grid container(which is a block element) as an inline item, same can be used in inline-flex
+    */
+    display: inline-grid;
+ }
+
+ .item {
+    /* comment out widht & height to see how grid occupy the cell */
+    width: 100px;
+    height: 50px;
+    background-color: greenyellow;
+    border: 2px solid black;
+    text-align: center;
+ }
+
+ .gridColumns {
+    width: 100px;
+    height: 100px;
+    background-color: greenyellow;
+    border: 2px solid black;
+    text-align: center;
+    
+    /* inspect elemenst to see the changes */
+
+    grid-column-start: 1; /* grid will start from line 1*/
+    grid-column-end: 4; /* grid will end at line 4 */
+    /* OR */
+    grid-column: 1/5; /* startColumn/endColumn*/
+    /* OR */
+    grid-column: 1/span 2; /* startColumn/spanNumber where spanNumber= no of colmns required*/
+
+    /* comment width & height to see the changes */    
+ }
+
+ .gridRows {
+    width: 100px;
+    height: 100px;
+    background-color: greenyellow;
+    border: 2px solid black;
+    text-align: center;
+
+    /* inspect elemenst to see the changes */
+    /* comment width & height to see the changes */ 
+
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-row: 1/3;
+    grid-row: 1/span 2;
+ }

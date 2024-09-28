@@ -1,0 +1,137 @@
+/* 
+selector {
+    property: value
+}
+ */
+
+/* Types of Selector */
+
+/* 1.Universal Selector- To select everything in document */
+* {
+    /* background-color: lightsalmon; */
+}
+
+/* 2.Element Selector- Selects all element of all types */
+h1,h3 {
+    color:#b92b27;
+}
+
+/* 3.Id Selector- Selects an element based on the value of element's id attribute */
+#login, #signup {
+    background-color: #b92b27;
+    color: white;
+}
+
+/* 4.Class Selector- Selects an element based on their class attribute */
+.upvote {
+    background-color: green;
+    color: aliceblue;
+}
+
+/* 5.Descendant Selector-Select all paragraphs inside divs */
+/* p a {
+    color: purple;
+    background-color: yellow;
+} */
+
+.post a {
+    color: purple;
+    background-color: yellow;
+}
+
+nav ul li a {
+    color: hotpink;
+}
+
+/* 6.Adjacent/Sibling Combinator- element1 + element2 e.g. h3 that come immediately after any p */
+p + h3 {
+    text-decoration: underline;
+}
+p ~ h3 {
+    text-decoration: underline;
+}
+
+.upvote + button {
+    background-color: cornflowerblue;
+    color: darkblue;
+}
+
+/* 7.Child Combinator- Selects all button which are direct children of spans */
+div > input {
+    background-color: darkgray;
+}
+
+/* 8.Attribute Selector- S  elects elements based on the presence or value of a given attribute */
+input[type="text"] {
+    color: red;
+}
+input[type="password"] {
+    color: yellow;
+}
+/* input[type] {
+    color: ghostwhite;
+} */
+
+/* 9.Pseudo Class- A Keyword added to selector that specifies a special state of the selected element(s) */
+
+button:hover {
+    background-color: black;
+}
+button:active {
+    background-color: chartreuse;
+    color: black;
+}
+p:active {
+    font-weight: bold;
+    color: green;
+}
+input[type="radio"]:checked + label {
+    color: red;
+    font-weight: bold;
+}
+/* div:nth-of-type(2) {
+    background-color: chocolate;
+} */
+/* 2n/3n/4n..... */
+div:nth-of-type(2n) {
+    background-color: chocolate;
+}
+
+/* 10.Pseudo Elements- A Keyword added to selector that lets you style a specific part of the specified element(s) */
+p::first-letter {
+    color: red;
+}
+p::first-line {
+    color: green;
+}
+p::selection {
+    background-color: yellow;
+}
+
+/* 11.Cascading & Specificity
+Selector Specificity- 
+- id> class> element (Inline Specificity are more specific than i.e inline > id)
+- more selectors > less selectors
+- if specificity is same => Cascading
+*/
+
+/* 12.!Important */
+h1 {
+    background-color: yellow !important; /* gives it the highest priority in the cascade, overriding any other conflicting styles */
+}
+h1 {
+    background-color: black;
+}
+
+/* 13.Inheritance 
+-child element inherits the property of parent/grandparent element
+-input/button element don't inherit properties of parent/grandparent element
+-to inherit properties of parent/grandparent element, we have to give property value as 'inherit'
+-width,height,border not inherited     
+e.g.
+input/button {
+    background-color: inherit;
+}
+*/
+
+
